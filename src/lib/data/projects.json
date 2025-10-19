@@ -1,0 +1,27 @@
+[
+  {
+    "name" : "prism",
+    "description" : "An accessibility tool designed to help developers and testers create WCAG compliant sites.",
+    "link" : "https://www.mantech.com/prism",
+    "status" : "In development"
+  },
+  {
+    "name" : "MindFlare",
+    "description" : "A CXP that reinvents learning",
+    "link" : "https://www.mantech.com/mindflare",
+    "status" : "In development"
+  },
+  {
+    "name": "Tuxedo",
+    "description" : "A personal website",
+    "link" : "https://localhost:5173",
+    "status" : "complete"
+  },
+  {
+    "name" : "Resumeee!",
+    "description" : "My personal resume site - the one you're looking at",
+    "link" : "https://localhost",
+    "status" : "In progress"
+  }
+
+]

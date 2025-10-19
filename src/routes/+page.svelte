@@ -4,8 +4,12 @@
 	import type { NavItem } from '$lib/components/FloatingNav.svelte';
 	import SectionTitle from '$lib/components/SectionTitle.svelte';
 	import ExperienceComponent from '$lib/components/ExperienceComponent.svelte';
+	import ProjectComponent from '$lib/components/ProjectComponent.svelte';
 	import experienceData from '$lib/data/experience.json';
+	import type { Project } from '$lib/types';
+	import projectData from '$lib/data/projects.json';
 	import { animateOnScroll } from '$lib/actions/animateOnScroll';
+	import Sidebar from '$lib/components/Sidebar.svelte';
 
 	const NavItems: NavItem[] = [
 		{ id: 'intro', label: 'intro' },
@@ -91,7 +95,15 @@
 			<div class="md:w-1/3 md:pl-8">
 				<SectionTitle title="Projects" />
 			</div>
-			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pr-8">Projects go here...</div>
+			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pr-8">
+				{#each projectData as proj, i}
+					<div class="flex" class:justify-start={i % 2 !== 0} class:justify-end={i % 2 === 0}>
+						<div class="w-full md:w-10/12 lg:w-8/12">
+							<ProjectComponent project={proj} />
+						</div>
+					</div>
+				{/each}
+			</div>
 		</section>
 	</SectionBox>
 	<SectionBox>
@@ -103,6 +115,17 @@
 				<SectionTitle title="Contact Me" />
 			</div>
 			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pl-8">Contact me here</div>
+		</section>
+	</SectionBox>
+	<SectionBox>
+		<section
+			id="test"
+			class="flex h-screen snap-start flex-col overflow-hidden p-8 md:flex-row-reverse md:items-center md:p-12"
+		>
+			<div class="md:w-1/3 md:pl-8">
+				<SectionTitle title="Test" />
+			</div>
+			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pr-8"></div>
 		</section>
 	</SectionBox>
 </div>
