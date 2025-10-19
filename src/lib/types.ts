@@ -5,7 +5,7 @@ export interface Project {
   status: string,
 }
 
-export interface Skills {
+export interface Skill {
   name: string,
   logo_uri: string,
 }
