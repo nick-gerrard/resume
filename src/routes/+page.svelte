@@ -5,6 +5,7 @@
 	import SectionTitle from '$lib/components/SectionTitle.svelte';
 	import ExperienceComponent from '$lib/components/ExperienceComponent.svelte';
 	import experienceData from '$lib/data/experience.json';
+	import { animateOnScroll } from '$lib/actions/animateOnScroll';
 
 	const NavItems: NavItem[] = [
 		{ id: 'intro', label: 'intro' },
@@ -20,11 +21,13 @@
 	<meta name="description" content="My professional resume and portfolio" />
 </svelte:head>
 
-<div class="relative grid min-h-screen grid-cols-1 bg-bg-base/90 text-text-base">
+<div
+	class="relative h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-bg-base/90 text-text-base"
+>
 	<SectionBox>
 		<section
 			id="intro"
-			class="flex flex-col overflow-hidden p-8 md:flex-row md:items-center md:p-12"
+			class="flex h-screen snap-start flex-col overflow-hidden p-8 md:flex-row md:items-center md:p-12"
 		>
 			<div class="md: mb-4 mb-8 items-center justify-center md:w-1/3 md:pr-8">
 				<h1 class="text-color-base mb-2 text-4xl font-bold md:text-5xl">Nick Gerrard</h1>
@@ -38,29 +41,41 @@
 	<SectionBox>
 		<section
 			id="experience"
-			class="flex flex-col overflow-hidden p-8 md:flex-row-reverse md:items-center md:p-12"
+			class="grid h-screen snap-start grid-cols-1 gap-8 overflow-hidden p-8 md:grid-cols-3 md:p-12"
 		>
-			<div class="md:w-1/3 md:pl-8">
-				<SectionTitle title="Experience" />
-			</div>
-			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pr-8">
-				{#each experienceData as job}
-					<ExperienceComponent
-						title={job.title}
-						company={job.company}
-						startDate={job.startDate}
-						endDate={job.endDate ?? undefined}
-						description={job.description}
-						location={job.location ?? undefined}
-					/>
+			<div class="h-full space-y-16 overflow-y-auto pr-4 md:col-span-2">
+				{#each experienceData as job, i}
+					<div class="flex" class:justify-start={i % 2 !== 0} class:justify-end={i % 2 === 0}>
+						<div class="w-full md:w-10/12 lg:w-8/12">
+							<ExperienceComponent
+								title={job.title}
+								company={job.company}
+								startDate={job.startDate}
+								endDate={job.endDate ?? undefined}
+								description={job.description}
+								location={job.location ?? undefined}
+							/>
+						</div>
+					</div>
 				{/each}
+			</div>
+
+			<div
+				class="sticky top-0 hidden h-screen items-center justify-center md:col-span-1 md:col-start-3 md:flex"
+			>
+				<div class="flex h-full items-center justify-center">
+					<SectionTitle title="Experience" />
+				</div>
+			</div>
+			<div class="mt-4 flex justify-center md:hidden">
+				<SectionTitle title="Experience" />
 			</div>
 		</section>
 	</SectionBox>
 	<SectionBox>
 		<section
 			id="skills"
-			class="flex flex-col overflow-hidden p-8 md:flex-row md:items-center md:p-12"
+			class="flex h-screen snap-start flex-col overflow-hidden p-8 md:flex-row md:items-center md:p-12"
 		>
 			<div class="md:w-1/3 md:pr-8">
 				<SectionTitle title="Skills" />
@@ -71,7 +86,7 @@
 	<SectionBox>
 		<section
 			id="projects"
-			class="flex flex-col overflow-hidden p-8 md:flex-row-reverse md:items-center md:p-12"
+			class="flex h-screen snap-start flex-col overflow-hidden p-8 md:flex-row-reverse md:items-center md:p-12"
 		>
 			<div class="md:w-1/3 md:pl-8">
 				<SectionTitle title="Projects" />
@@ -82,7 +97,7 @@
 	<SectionBox>
 		<section
 			id="contact"
-			class="flex flex-col overflow-hidden p-8 md:flex-row md:items-center md:p-12"
+			class="flex h-screen snap-start flex-col overflow-hidden p-8 md:flex-row md:items-center md:p-12"
 		>
 			<div class="md:w-1/3 md:pr-8">
 				<SectionTitle title="Contact Me" />
@@ -90,12 +105,6 @@
 			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pl-8">Contact me here</div>
 		</section>
 	</SectionBox>
-	<svg
-		class="pointer-events-none absolute top-0 left-0 h-full w-full"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<line x1="50" y1="50" x2="200" y2="200" stroke="var(--color-primary)" stroke-width="2" />
-	</svg>
 </div>
 
 <style lang="postcss">

@@ -14,5 +14,56 @@
 		"endDate": "Dec 2021",
 		"description": "Built responsive user interfaces with Svelte and Sapper. Collaborated with designers and backend engineers.",
 		"location": "New York, NY"
+	},
+
+	{
+		"title": "Lead Svelte Developer",
+		"company": "Awesome Tech Inc.",
+		"startDate": "Jan 2022",
+		"endDate": null, 
+		"description": "Led the frontend team in developing cutting-edge web applications using SvelteKit. Mentored junior developers.",
+		"location": "Remote"
+	},
+	{
+		"title": "Frontend Developer",
+		"company": "Startup Innovations",
+		"startDate": "Jun 2019",
+		"endDate": "Dec 2021",
+		"description": "Built responsive user interfaces with Svelte and Sapper. Collaborated with designers and backend engineers.",
+		"location": "New York, NY"
+	},
+
+	{
+		"title": "Lead Svelte Developer",
+		"company": "Awesome Tech Inc.",
+		"startDate": "Jan 2022",
+		"endDate": null, 
+		"description": "Led the frontend team in developing cutting-edge web applications using SvelteKit. Mentored junior developers.",
+		"location": "Remote"
+	},
+	{
+		"title": "Frontend Developer",
+		"company": "Startup Innovations",
+		"startDate": "Jun 2019",
+		"endDate": "Dec 2021",
+		"description": "Built responsive user interfaces with Svelte and Sapper. Collaborated with designers and backend engineers.",
+		"location": "New York, NY"
+	},
+
+	{
+		"title": "Lead Svelte Developer",
+		"company": "Awesome Tech Inc.",
+		"startDate": "Jan 2022",
+		"endDate": null, 
+		"description": "Led the frontend team in developing cutting-edge web applications using SvelteKit. Mentored junior developers.",
+		"location": "Remote"
+	},
+	{
+		"title": "Frontend Developer",
+		"company": "Startup Innovations",
+		"startDate": "Jun 2019",
+		"endDate": "Dec 2021",
+		"description": "Built responsive user interfaces with Svelte and Sapper. Collaborated with designers and backend engineers.",
+		"location": "New York, NY"
 	}
 ]
