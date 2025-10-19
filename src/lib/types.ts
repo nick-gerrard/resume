@@ -4,3 +4,8 @@ export interface Project {
   link: string,
   status: string,
 }
+
+export interface Skills {
+  name: string,
+  logo_uri: string,
+}
