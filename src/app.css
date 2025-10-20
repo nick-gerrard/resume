@@ -1,10 +1,8 @@
 @import 'tailwindcss';
+/* @import 'tailwindcss/preflight'; */
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @theme {
 	/* Core Backgrounds & Text (Dark Base) */

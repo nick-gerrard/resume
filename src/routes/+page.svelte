@@ -7,7 +7,7 @@
 	import SkillsComponent from '$lib/components/SkillsComponent.svelte';
 	import ProjectComponent from '$lib/components/ProjectComponent.svelte';
 	import experienceData from '$lib/data/experience.json';
-	import type { Project, Skill } from '$lib/types';
+	// import type { Project, Skill } from '$lib/types';
 	import projectData from '$lib/data/projects.json';
 	import skillsData from '$lib/data/skills.json';
 
