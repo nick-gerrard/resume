@@ -33,7 +33,7 @@
 			id="intro"
 			class="flex h-screen snap-start flex-col overflow-hidden p-8 md:flex-row md:items-center md:p-12"
 		>
-			<div class="md: mb-4 mb-8 items-center justify-center md:w-1/3 md:pr-8">
+			<div class="md: mb-8 items-center justify-center md:w-1/3 md:pr-8">
 				<h1 class="text-color-base mb-2 text-4xl font-bold md:text-5xl">Nick Gerrard</h1>
 				<p class="text-color-base text-xl">AI/ML Engineer</p>
 			</div>
