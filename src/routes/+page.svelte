@@ -4,12 +4,12 @@
 	import type { NavItem } from '$lib/components/FloatingNav.svelte';
 	import SectionTitle from '$lib/components/SectionTitle.svelte';
 	import ExperienceComponent from '$lib/components/ExperienceComponent.svelte';
+	import SkillsComponent from '$lib/components/SkillsComponent.svelte';
 	import ProjectComponent from '$lib/components/ProjectComponent.svelte';
 	import experienceData from '$lib/data/experience.json';
-	import type { Project } from '$lib/types';
+	import type { Project, Skill } from '$lib/types';
 	import projectData from '$lib/data/projects.json';
-	import { animateOnScroll } from '$lib/actions/animateOnScroll';
-	import Sidebar from '$lib/components/Sidebar.svelte';
+	import skillsData from '$lib/data/skills.json';
 
 	const NavItems: NavItem[] = [
 		{ id: 'intro', label: 'intro' },
@@ -84,7 +84,11 @@
 			<div class="md:w-1/3 md:pr-8">
 				<SectionTitle title="Skills" />
 			</div>
-			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pl-8">Skills go here</div>
+			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pl-8">
+				{#each skillsData as skill}
+					<SkillsComponent {skill} />
+				{/each}
+			</div>
 		</section>
 	</SectionBox>
 	<SectionBox>

@@ -1,0 +1,18 @@
+[
+  {"name" : "python",
+  "logo_uri" : "/logos/python-svgrepo-com.svg"},
+  {"name" : "angular",
+  "logo_uri" : "/logos/angular-svgrepo-com.svg"},
+  {"name" : "arch",
+  "logo_uri" : "/logos/arch-linux-svgrepo-com.svg"},
+  {"name" : "flask",
+  "logo_uri" : "/logos/flask-svgrepo-com.svg"},
+  {"name" : "go",
+  "logo_uri" : "/logos/go-svgrepo-com.svg"},
+  {"name" : "JavaScript",
+  "logo_uri" : "/logos/js-svgrepo-com.svg"},
+  {"name" : "linux",
+  "logo_uri" : "/logos/linux-svgrepo-com.svg"},
+  {"name" : "svelte",
+  "logo_uri" : "/logos/svelte-icon-svgrepo-com.svg"}
+]
