@@ -83,8 +83,16 @@
 		>
 			<div class="md:w-1/3 md:pr-8">
 				<SectionTitle title="Skills" />
+				<div
+					class="align-center m-8 justify-center rounded-md border-2 border-border-emphasis p-8 text-center"
+				>
+					I have a wide variety of skills cultivated over years of development experience, including
+					frontend frameworks like Angular and Svelte, backends like flask and fastAPI. I've also
+					spent time working in the AWS ecosystem, so I'm prepared for everything from prototyping
+					to final deployment.
+				</div>
 			</div>
-			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pl-8">
+			<div class="grid h-1/2 grid-cols-4 items-center overflow-y-auto md:w-2/3 md:pl-8">
 				{#each skillsData as skill}
 					<SkillsComponent {skill} />
 				{/each}
@@ -118,7 +126,19 @@
 			<div class="md:w-1/3 md:pr-8">
 				<SectionTitle title="Contact Me" />
 			</div>
-			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pl-8">Contact me here</div>
+			<div class="h-full flex-grow overflow-y-auto md:w-2/3 md:pl-8">
+				<div
+					class="h-1/2 justify-center rounded-md border-2 border-border-emphasis text-center align-middle text-xl"
+				>
+					You can find all of my important contact links below:
+
+					<p class="p-4"><a href="https://linkedin.com">LinkedIN</a></p>
+					<p class="p-4"><a href="https://github.com/nick-gerrard">GitHub</a></p>
+					<p class="p-4"><a href="mailto:nick.gerrard16@gmail.com">Gmail</a></p>
+
+					Feel free to reach out for any of your frontend development needs!
+				</div>
+			</div>
 		</section>
 	</SectionBox>
 	<SectionBox>

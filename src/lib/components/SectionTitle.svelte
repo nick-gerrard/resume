@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte'; // We might need onMount if observer setup needs DOM
-
 	let { title }: { title: string } = $props();
 
 	function typewriterAction(node: HTMLElement, { speed = 1 } = {}) {
